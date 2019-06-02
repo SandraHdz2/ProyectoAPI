@@ -24,7 +24,7 @@ router.put('/:userId', function(req, res, next) {
   User.findOneAndUpdate({
    'id': req.params.userId
   },{$set:nov}, function(err, datos) {
-   if (datos == null){
+    if (datos == null){
       res.status(404).json({
         mensaje: "No existe"
       });
