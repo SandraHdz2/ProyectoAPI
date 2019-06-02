@@ -55,7 +55,7 @@ request.delete('https://proyectoapinovela.herokuapp.com/api/novela/'+ myId2, fun
       });
   }else {
      var datos=JSON.parse(data);
-     if(data.id==undefined){
+     if(datos==null){
       res.status(404).json({
         mensaje: "No existe"
       });
