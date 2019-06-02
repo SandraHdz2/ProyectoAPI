@@ -23,7 +23,7 @@ router.get('/eliminar', function(req, res, next) {
 
 router.get('/consultarapi', function(req, res, next) {
 var myId = req.query.id;
-request('http://localhost:3000/api/novela/'+ myId, function(err,response,data){
+request('https://proyectoapinovela.herokuapp.com/api/novela/'+ myId, function(err,response,data){
 	if(err){
 		res.status(404).json({
         mensaje: "No existe"
@@ -48,7 +48,7 @@ request('http://localhost:3000/api/novela/'+ myId, function(err,response,data){
 });
 router.get('/eliminarapi', function(req, res, next) {
 var myId2 = req.query.id;
-request.delete('http://localhost:3000/api/novela/'+ myId2, function(err,response,data){
+request.delete('https://proyectoapinovela.herokuapp.com/api/novela/'+ myId2, function(err,response,data){
   if(err){
     res.status(404).json({
         mensaje: "No existe"
